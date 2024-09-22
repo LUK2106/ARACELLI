@@ -6,16 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>FLORES</title>
+    <title>FLORES-AMARILLAS-ARACELLI</title>
 </head>
 <body>
+
+
+    
+   <!-- Botón para iniciar la música -->
+<button id="music-button" onclick="document.getElementById('background-audio').play()">Música</button>
+
+<!-- Audio para reproducir -->
+<audio id="background-audio" loop>
+    <source src="flor.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
     <div class="greetings">
         <span>H</span>
         <span>O</span>
         <span>L</span>
         <span>A</span>
-    </div>
-    <div class="greetings">
+        &nbsp;
         <span>A</span>
         <span>R</span>
         <span>A</span>
@@ -25,19 +35,16 @@
         <span>L</span>
         <span>I</span>
     </div>
+
     <div class="description">
-        <span>Tengo un regalo especial para ti!!</span>
-    </div>
-    <div class="button">
-        <button id="playSong">Reproducir Canción</button>
-        <audio id="song" src="regalo.mp3" preload="auto"></audio>
+        <span>Este regalo es para la mejor presi de IEEE ComSoc San Marcos</span>
+        <br></br>
     </div>
 
-    <script>
-        document.getElementById('playSong').addEventListener('click', function() {
-            var song = document.getElementById('song');
-            song.play();
-        });
-    </script>
+    <!-- Botón para ir a FLORES.html -->
+    <div class="button">
+        <button onclick="window.location.href='FLORES.html'">Toca aquí y serás Tercio 🐈‍⬛🐈</button>
+    </div>
+
 </body>
 </html>

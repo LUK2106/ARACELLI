@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>FLORES</title>
+    <title>FLORES-AMARILLAS-ARACELLI</title>
 </head>
-
+  
+<style>
+  #music-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background-color: yellow;
+      border: 2px solid black;
+      font-size: 16px;
+      z-index: 9999; /* Asegura que esté encima de otros elementos */
+      cursor: pointer;
+  }
+</style>
+</head>
 <body class="container">
+<!-- Botón para iniciar la música -->
+<button id="music-button" onclick="document.getElementById('background-audio').play()">Musiquita 🌻🎵</button>
+
+<!-- Audio para reproducir -->
+<audio id="background-audio" loop>
+  <source src="flor2.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
@@ -306,6 +329,7 @@
           <div class="leaf leaf--3"></div>
         </div>
       </div>
+De Criss :)
     </div>
     <script src="main.js"></script>
   </body>
