@@ -11,15 +11,31 @@
 <body>
 
 <!-- Audio que se reproduce automáticamente -->
-<audio id="background-audio" autoplay loop muted>
+<audio id="background-audio" autoplay loop>
     <source src="flor.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
 </audio>
 
-<!-- Script para desactivar el mute cuando el usuario haga clic en la página -->
+<!-- Script para activar el sonido cuando el usuario haga scroll -->
 <script>
-    window.addEventListener('click', function() {
-        document.getElementById('background-audio').muted = false;
+    const audio = document.getElementById('background-audio');
+
+    // Verifica si el audio está muteado
+    document.addEventListener('scroll', function() {
+        if (audio.muted) {
+            audio.muted = false;
+            audio.play().catch(error => {
+                console.error('Error al reproducir el audio:', error);
+            });
+        }
+    });
+
+    // Iniciar la reproducción en mute (opcional, para que el navegador no bloquee)
+    window.addEventListener('load', function() {
+        audio.muted = true;
+        audio.play().catch(error => {
+            console.error('Error al iniciar el audio en mute:', error);
+        });
     });
 </script>
 
