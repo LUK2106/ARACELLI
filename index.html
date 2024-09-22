@@ -10,60 +10,39 @@
 </head>
 <body>
 
-<!-- Audio que se reproduce automáticamente -->
-<audio id="background-audio" autoplay loop>
+   <!-- Botón para iniciar la música -->
+<button id="music-button" onclick="document.getElementById('background-audio').play()">Música</button>
+
+<!-- Audio para reproducir -->
+<audio id="background-audio" loop>
     <source src="flor.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
 </audio>
+    <div class="greetings">
+        <span>H</span>
+        <span>O</span>
+        <span>L</span>
+        <span>A</span>
+        &nbsp;
+        <span>A</span>
+        <span>R</span>
+        <span>A</span>
+        <span>C</span>
+        <span>E</span>
+        <span>L</span>
+        <span>L</span>
+        <span>I</span>
+    </div>
 
-<!-- Script para activar el sonido cuando el usuario haga scroll -->
-<script>
-    const audio = document.getElementById('background-audio');
+    <div class="description">
+        <span>Este regalo es para la mejor presi de IEEE ComSoc San Marcos</span>
+        <br></br>
+    </div>
 
-    // Verifica si el audio está muteado
-    document.addEventListener('scroll', function() {
-        if (audio.muted) {
-            audio.muted = false;
-            audio.play().catch(error => {
-                console.error('Error al reproducir el audio:', error);
-            });
-        }
-    });
-
-    // Iniciar la reproducción en mute (opcional, para que el navegador no bloquee)
-    window.addEventListener('load', function() {
-        audio.muted = true;
-        audio.play().catch(error => {
-            console.error('Error al iniciar el audio en mute:', error);
-        });
-    });
-</script>
-
-<div class="greetings">
-    <span>H</span>
-    <span>O</span>
-    <span>L</span>
-    <span>A</span>
-    &nbsp;
-    <span>A</span>
-    <span>R</span>
-    <span>A</span>
-    <span>C</span>
-    <span>E</span>
-    <span>L</span>
-    <span>L</span>
-    <span>I</span>
-</div>
-
-<div class="description">
-    <span>Este regalo es para la mejor presi de IEEE ComSoc San Marcos</span>
-    <br></br>
-</div>
-
-<!-- Botón para ir a FLORES.html -->
-<div class="button">
-    <button onclick="window.location.href='FLORES.html'">Toca aquí y serás Tercio 🐈‍⬛🐈</button>
-</div>
+    <!-- Botón para ir a FLORES.html -->
+    <div class="button">
+        <button onclick="window.location.href='FLORES.html'">Toca aquí y serás Tercio 🐈‍⬛🐈</button>
+    </div>
 
 </body>
 </html>
