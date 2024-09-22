@@ -10,39 +10,44 @@
 </head>
 <body>
 
-   <!-- Botón para iniciar la música -->
-<button id="music-button" onclick="document.getElementById('background-audio').play()">Música</button>
-
-<!-- Audio para reproducir -->
-<audio id="background-audio" loop>
+<!-- Audio que se reproduce automáticamente -->
+<audio id="background-audio" autoplay loop muted>
     <source src="flor.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
 </audio>
-    <div class="greetings">
-        <span>H</span>
-        <span>O</span>
-        <span>L</span>
-        <span>A</span>
-        &nbsp;
-        <span>A</span>
-        <span>R</span>
-        <span>A</span>
-        <span>C</span>
-        <span>E</span>
-        <span>L</span>
-        <span>L</span>
-        <span>I</span>
-    </div>
 
-    <div class="description">
-        <span>Este regalo es para la mejor presi de IEEE ComSoc San Marcos</span>
-        <br></br>
-    </div>
+<!-- Script para desactivar el mute cuando el usuario haga clic en la página -->
+<script>
+    window.addEventListener('click', function() {
+        document.getElementById('background-audio').muted = false;
+    });
+</script>
 
-    <!-- Botón para ir a FLORES.html -->
-    <div class="button">
-        <button onclick="window.location.href='FLORES.html'">Toca aquí y serás Tercio 🐈‍⬛🐈</button>
-    </div>
+<div class="greetings">
+    <span>H</span>
+    <span>O</span>
+    <span>L</span>
+    <span>A</span>
+    &nbsp;
+    <span>A</span>
+    <span>R</span>
+    <span>A</span>
+    <span>C</span>
+    <span>E</span>
+    <span>L</span>
+    <span>L</span>
+    <span>I</span>
+</div>
+
+<div class="description">
+    <span>Este regalo es para la mejor presi de IEEE ComSoc San Marcos</span>
+    <br></br>
+</div>
+
+<!-- Botón para ir a FLORES.html -->
+<div class="button">
+    <button onclick="window.location.href='FLORES.html'">Toca aquí y serás Tercio 🐈‍⬛🐈</button>
+</div>
 
 </body>
 </html>
